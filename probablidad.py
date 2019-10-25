@@ -68,3 +68,14 @@ def trans(vec1,vec2):
     der = arr[0][0][1] / aba
     res = izq + der
     return res
+def hermitian(m1,v1):
+    if mat_adjunta(m1) == m1:
+        average(m1,v1)
+        vari(m1,v1)
+    else:
+        return False
+def average(m1,v1):
+    m = multiplicacion_matrices(m1,v1)
+    i = mat_adjunta(m)
+    res = (i[0][0][0] * v1[0][0][0]) + (i[0][1][1] * v1[1][0][1])
+    return res
